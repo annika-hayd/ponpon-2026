@@ -1,13 +1,16 @@
 extends Area2D
 
-const DEFAULT_SPEED = 45.0
+const DEFAULT_SPEED = 300.0 #300 same speed as player rn.
 
 var _speed := DEFAULT_SPEED
-var direction := Vector2(randf_range(0, 1) * 10, randf_range(0, 1) * 10) 
+var direction := Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)).normalized()
+
 var _is_blinking: bool = false
+var playingField: ReferenceRect
+
 
 @onready var _initial_pos := position
-@onready var playingField: ReferenceRect = $"../PlayingField"
+
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var collider: CollisionShape2D = $CollisionShape2D
 @export var _bounce_direction := 1

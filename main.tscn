@@ -3,18 +3,20 @@
 [ext_resource type="Script" uid="uid://lrd41pj8oetp" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://brkk1lbweoyit" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="Texture2D" uid="uid://c77je2wb0bx72" path="res://assets/Sprites/Clawmachine.png" id="3_7mycd"]
+[ext_resource type="Script" uid="uid://ddcvp6cd5k163" path="res://background.gd" id="4_dg77c"]
 [ext_resource type="Texture2D" uid="uid://cypkt3qpydj70" path="res://assets/Sprites/ClawMachineGlass.png" id="4_kek77"]
 [ext_resource type="Texture2D" uid="uid://bxjj8xuut3wew" path="res://assets/Sprites/CoinSlot.png" id="5_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cs63m3okcd8b2" path="res://bullet.tscn" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://c6gxrrv5yeghm" path="res://assets/Sprites/Sparkle.png" id="5_272bh"]
 [ext_resource type="Texture2D" uid="uid://b175hf6ipufcx" path="res://assets/Sprites/CoinSad.png" id="6_efxa6"]
 [ext_resource type="FontFile" uid="uid://4eqh3vdbk283" path="res://Fonts/you-re-gone.youre-regular.otf" id="7_272bh"]
+[ext_resource type="Script" uid="uid://dxqwwsryaedoc" path="res://bullet_spawner.gd" id="10_ycdy4"]
+[ext_resource type="Script" uid="uid://cfqxmelxbevre" path="res://ui.gd" id="11_w48qg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_chynj"]
 
 [node name="Main" type="Node" unique_id=2102006913]
 script = ExtResource("1_7mycd")
-bullet_scene = ExtResource("5_7mycd")
 
 [node name="LevelTimer" type="Timer" parent="." unique_id=1523144947]
 wait_time = 15.0
@@ -23,6 +25,7 @@ one_shot = true
 [node name="Background" type="Sprite2D" parent="." unique_id=1555562007]
 position = Vector2(235, 423)
 texture = ExtResource("3_7mycd")
+script = ExtResource("4_dg77c")
 
 [node name="ClawMachineGlass" type="Sprite2D" parent="Background" unique_id=1470010535]
 z_index = 2
@@ -57,10 +60,12 @@ z_index = 2
 position = Vector2(0, -3)
 texture = ExtResource("5_272bh")
 
-[node name="Bullet" parent="." unique_id=55191596 instance=ExtResource("5_7mycd")]
-position = Vector2(182, 507)
+[node name="BulletSpawner" type="Node2D" parent="." unique_id=1139864530]
+script = ExtResource("10_ycdy4")
+bullet_scene = ExtResource("5_7mycd")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=161476821]
+script = ExtResource("11_w48qg")
 
 [node name="TitleScreen" type="Control" parent="UI" unique_id=1368919015]
 layout_mode = 3
@@ -156,7 +161,7 @@ offset_bottom = 8.0
 
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
 [connection signal="area_entered" from="Player" to="." method="_on_player_area_entered"]
-[connection signal="pressed" from="UI/TitleScreen/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="UI/DialogBox/NextButton" to="." method="_on_next_dialog_button_pressed"]
-[connection signal="pressed" from="UI/GameOverScreen/TryAgain" to="." method="_on_try_again_pressed"]
-[connection signal="pressed" from="UI/GameEndScreen/TryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="UI/TitleScreen/StartButton" to="UI" method="_on_start_button_pressed"]
+[connection signal="pressed" from="UI/DialogBox/NextButton" to="UI" method="_on_next_button_pressed"]
+[connection signal="pressed" from="UI/GameOverScreen/TryAgain" to="UI" method="_on_try_again_pressed"]
+[connection signal="pressed" from="UI/GameEndScreen/TryAgain" to="UI" method="_on_try_again_pressed"]
