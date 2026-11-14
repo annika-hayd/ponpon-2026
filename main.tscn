@@ -48,14 +48,18 @@ offset_bottom = 40.0
 
 [node name="StartButton" type="Button" parent="UI/TitleScreen" unique_id=2126329949]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 214.0
+offset_top = 343.0
+offset_right = 260.0
+offset_bottom = 374.0
 text = "Start"
 
 [node name="ScreenTitle" type="Label" parent="UI/TitleScreen" unique_id=36390358]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 118.0
+offset_top = 187.0
+offset_right = 362.0
+offset_bottom = 215.0
 theme_override_fonts/font = ExtResource("7_272bh")
 theme_override_font_sizes/font_size = 23
 text = "Grab me If you can"
@@ -70,25 +74,36 @@ offset_bottom = 40.0
 
 [node name="Dialog" type="Label" parent="UI/DialogBox" unique_id=828260868]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 76.0
+offset_top = 229.0
+offset_right = 392.0
+offset_bottom = 289.0
 
 [node name="NextButton" type="Button" parent="UI/DialogBox" unique_id=1553730242]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "next"
+offset_left = 216.0
+offset_top = 342.0
+offset_right = 259.0
+offset_bottom = 373.0
+text = "Next"
 
 [node name="GameOverScreen" type="Control" parent="UI" unique_id=1093430261]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 192.0
+offset_top = 181.0
+offset_right = 275.0
+offset_bottom = 221.0
 
-[node name="Label" type="Label" parent="UI/GameOverScreen" unique_id=1386023522]
+[node name="EndTitle" type="Label" parent="UI/GameOverScreen" unique_id=1386023522]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -26.0
+offset_top = 6.0
+offset_right = 117.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("7_272bh")
+theme_override_font_sizes/font_size = 22
+text = "Game Over!"
 
 [connection signal="area_entered" from="Player" to="." method="_on_player_area_entered"]
 [connection signal="pressed" from="UI/TitleScreen/StartButton" to="." method="_on_start_button_pressed"]

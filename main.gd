@@ -36,6 +36,7 @@ func change_state(new_state: State) -> void:
 		State.DIALOG:
 			set_gameplay_active(false)
 			clear_all_bullets()
+			player.reset_player() 
 			show_dialog_for_level(current_level)
 			dialog_box.show()
 			
@@ -52,11 +53,11 @@ func change_state(new_state: State) -> void:
 func show_dialog_for_level(level: int) -> void:
 	match level:
 		1:
-			dialog_label.text = "Test Test 01 01 01 This is a Text"
+			dialog_label.text = "Welcome to this Game, this is a initial Dialog,\n  klick 'next' for starting the game"
 		2:
-			dialog_label.text = "Lorem ipsum dolor sit amet 02 02 02 02"
+			dialog_label.text = "HA! You lost this level.. or maybe won...\n at least you've been hit by the bullet!"
 		3:
-			dialog_label.text = "This is some more Dialoge test would it work like that?"
+			dialog_label.text = "How do you like that?\n This is your last chance!!\n Good luck!"
 
 # --- BULLETS SPAWNEN & AUFRÄUMEN ---
 func spawn_bullets_for_level(level: int) -> void:
@@ -73,7 +74,6 @@ func clear_all_bullets() -> void:
 		b.queue_free()
 
 func set_gameplay_active(is_active: bool) -> void:
-	player.set_process_input(is_active)
 	player.set_process(is_active)
 	for b in get_tree().get_nodes_in_group("bullets"):
 		b.set_process(is_active)
