@@ -11,6 +11,7 @@ var bullet_blinking_seconds: float = 5.0
 @onready var level_timer: Timer = $LevelTimer
 @onready var player: Area2D = $Player
 @onready var bullet_spawner: Node2D = $BulletSpawner
+@onready var background = $Background
 
 func _ready() -> void:
 	# Verbindet die eigenen Signale aus ui.gd automatisch per Code:
@@ -28,6 +29,7 @@ func change_state(new_state: State) -> void:
 			level_timer.stop()
 			current_level = 1
 			bullet_spawner.clear_all_bullets()
+			background.reset_coin()
 			set_gameplay_active(false)
 			ui.show_title()
 			
@@ -75,6 +77,7 @@ func progress_in_story() -> void:
 
 # --- SIGNALE ---
 func _on_ui_start_pressed() -> void:
+	await background.insert_coin()
 	change_state(State.DIALOG)
 
 func _on_ui_next_dialog_pressed() -> void:
@@ -82,7 +85,7 @@ func _on_ui_next_dialog_pressed() -> void:
 
 func _on_ui_try_again_pressed() -> void:
 	change_state(State.TITLE)
-
+	
 func _on_level_timer_timeout() -> void:
 	progress_in_story()
 

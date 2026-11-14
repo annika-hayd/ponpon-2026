@@ -38,7 +38,7 @@ position = Vector2(147, 120)
 texture = ExtResource("5_4c57u")
 
 [node name="Coin" type="Sprite2D" parent="Background" unique_id=2139961181]
-position = Vector2(196, 119)
+position = Vector2(216, 120)
 texture = ExtResource("6_efxa6")
 
 [node name="PlayingField" type="ReferenceRect" parent="." unique_id=872706747]
