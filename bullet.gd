@@ -4,6 +4,7 @@ const DEFAULT_SPEED = 45.0
 
 var _speed := DEFAULT_SPEED
 var direction := Vector2(randf_range(0, 1) * 10, randf_range(0, 1) * 10) 
+var _is_blinking: bool = false
 
 @onready var _initial_pos := position
 @onready var playingField: ReferenceRect = $"../PlayingField"
@@ -34,6 +35,16 @@ func _process(delta: float) -> void:
 	elif global_position.y + radius >= bounds.end.y:
 		global_position.y = bounds.end.y - radius
 		_on_hitting_boundarie(Vector2.UP)
+		
+func start_blinking() -> void:
+	if _is_blinking:
+		return
+	_is_blinking = true
+	
+	# Lässt die Bullet sanft zwischen sichtbar und halb-transparent blinken
+	var tween = create_tween().set_loops()
+	tween.tween_property(self, "modulate:a", 0.2, 0.2)
+	tween.tween_property(self, "modulate:a", 1.0, 0.2)
 		
 func reset() -> void:
 	direction = Vector2(randf_range(0, 1) * 10, randf_range(0, 1) * 10) 
