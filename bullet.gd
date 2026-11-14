@@ -34,6 +34,12 @@ func _process(delta: float) -> void:
 	elif global_position.y + radius >= bounds.end.y:
 		global_position.y = bounds.end.y - radius
 		_on_hitting_boundarie(Vector2.UP)
+		
+func reset() -> void:
+	direction = Vector2(randf_range(0, 1) * 10, randf_range(0, 1) * 10) 
+	position = _initial_pos
+	_speed = DEFAULT_SPEED
 
 func _on_hitting_boundarie(wall_normal: Vector2) -> void:
 	direction = direction.bounce(wall_normal)
+	
