@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="ponpon_2026"
+run/main_scene="uid://b4ds7r813d0ad"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=470
+window/size/viewport_height=845
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/handheld/orientation=1
 
 [physics]
 

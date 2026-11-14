@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b4ds7r813d0ad"]
+
+[ext_resource type="Script" uid="uid://lrd41pj8oetp" path="res://player.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dt0txvi3v5jg2" path="res://assets/clawMachine.png" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bggvli5hc0ea7" path="res://icon.svg" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://vyq3kh4a466x" path="res://bullet.gd" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bwsqsdnrhksja" path="res://assets/bullet.png" id="6_7mycd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_chynj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_chynj"]
+radius = 7.0
+
+[node name="Main" type="Node" unique_id=2102006913]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1555562007]
+position = Vector2(235, 423)
+texture = ExtResource("1_h2yge")
+
+[node name="PlayingField" type="ReferenceRect" parent="." unique_id=872706747]
+offset_left = 76.0
+offset_top = 465.0
+offset_right = 392.0
+offset_bottom = 783.0
+
+[node name="Player" type="Area2D" parent="." unique_id=1042657038]
+position = Vector2(241, 623)
+script = ExtResource("1_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1769662897]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_chynj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=990957076]
+position = Vector2(0, -3)
+texture = ExtResource("2_h2yge")
+
+[node name="Bullet" type="Area2D" parent="." unique_id=1663006375]
+position = Vector2(182, 507)
+rotation = 0.7853982
+script = ExtResource("5_lquwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bullet" unique_id=844890295]
+z_index = 4
+texture = ExtResource("6_7mycd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet" unique_id=1362989822]
+shape = SubResource("CircleShape2D_chynj")
