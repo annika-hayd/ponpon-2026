@@ -14,7 +14,6 @@ var bullet_blinking_seconds: float = 5.0
 @onready var background = $Background
 
 func _ready() -> void:
-	# Verbindet die eigenen Signale aus ui.gd automatisch per Code:
 	ui.start_pressed.connect(_on_ui_start_pressed)
 	ui.next_dialog_pressed.connect(_on_ui_next_dialog_pressed)
 	ui.try_again_pressed.connect(_on_ui_try_again_pressed)

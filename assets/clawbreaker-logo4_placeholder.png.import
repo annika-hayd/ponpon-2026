@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn63ojihytpk2"
-path="res://.godot/imported/bunny_wiggle.png-334f1b6bd2464e6cb5aacd9924dd8286.ctex"
+uid="uid://dg7aaaeytwtl0"
+path="res://.godot/imported/clawbreaker-logo4_placeholder.png-db50f4e9df551ed0951ce5a92de182d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bunny/bunny_wiggle.png"
-dest_files=["res://.godot/imported/bunny_wiggle.png-334f1b6bd2464e6cb5aacd9924dd8286.ctex"]
+source_file="res://assets/clawbreaker-logo4_placeholder.png"
+dest_files=["res://.godot/imported/clawbreaker-logo4_placeholder.png-db50f4e9df551ed0951ce5a92de182d1.ctex"]
 
 [params]
 

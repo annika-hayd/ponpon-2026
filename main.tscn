@@ -8,9 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://cs63m3okcd8b2" path="res://bullet.tscn" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://c6gxrrv5yeghm" path="res://assets/Sprites/Sparkle.png" id="5_272bh"]
 [ext_resource type="Texture2D" uid="uid://b175hf6ipufcx" path="res://assets/Sprites/CoinSad.png" id="6_efxa6"]
+[ext_resource type="Texture2D" uid="uid://d5fmpouaiw13" path="res://assets/UI/placeholder_claw.png" id="6_w48qg"]
 [ext_resource type="FontFile" uid="uid://4eqh3vdbk283" path="res://Fonts/you-re-gone.youre-regular.otf" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://dwrl5ijgs10ik" path="res://assets/Sprites/placeholder_bunny.png" id="7_vivmo"]
 [ext_resource type="Script" uid="uid://dxqwwsryaedoc" path="res://bullet_spawner.gd" id="10_ycdy4"]
 [ext_resource type="Script" uid="uid://cfqxmelxbevre" path="res://ui.gd" id="11_w48qg"]
+[ext_resource type="Texture2D" uid="uid://dg7aaaeytwtl0" path="res://assets/clawbreaker-logo4_placeholder.png" id="14_2cqfq"]
+[ext_resource type="AudioStream" uid="uid://2nrmbj56fwr5" path="res://assets/music/phase 1 V1.wav" id="15_vivmo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_efxa6"]
 load_path = "res://.godot/imported/Clawmachine.png-a58ca17e72a5877aeb3a9061b1585691.ctex"
@@ -44,6 +48,14 @@ position = Vector2(216, 120)
 rotation = 0.44854963
 texture = ExtResource("6_efxa6")
 
+[node name="Claw" type="Sprite2D" parent="Background" unique_id=1309868587]
+position = Vector2(-7, -251)
+texture = ExtResource("6_w48qg")
+
+[node name="Bunny" type="Sprite2D" parent="Background" unique_id=607978823]
+position = Vector2(-2, -55)
+texture = ExtResource("7_vivmo")
+
 [node name="PlayingField" type="ReferenceRect" parent="." unique_id=872706747]
 offset_left = 64.0
 offset_top = 454.0
@@ -76,25 +88,30 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="StartButton" type="Button" parent="UI/TitleScreen" unique_id=2126329949]
-layout_mode = 0
-offset_left = 214.0
-offset_top = 343.0
-offset_right = 260.0
-offset_bottom = 374.0
-text = "Start"
-
 [node name="ScreenTitle" type="Label" parent="UI/TitleScreen" unique_id=36390358]
 layout_mode = 0
-offset_left = 118.0
-offset_top = 187.0
-offset_right = 362.0
-offset_bottom = 215.0
+offset_left = 116.0
+offset_top = 468.0
+offset_right = 360.0
+offset_bottom = 496.0
 theme_override_fonts/font = ExtResource("7_272bh")
 theme_override_font_sizes/font_size = 23
 text = "Claw Breaker"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/TitleScreen" unique_id=2011396639]
+position = Vector2(235.00003, 598.00006)
+scale = Vector2(0.81578946, 0.84031415)
+texture = ExtResource("14_2cqfq")
+
+[node name="StartButton" type="Button" parent="UI/TitleScreen" unique_id=2126329949]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 704.0
+offset_right = 253.0
+offset_bottom = 735.0
+text = "Start"
 
 [node name="DialogBox" type="Control" parent="UI" unique_id=433719524]
 layout_mode = 3
@@ -161,6 +178,10 @@ text = "THE END! <3"
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1712882528]
+stream = ExtResource("15_vivmo")
+autoplay = true
 
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
 [connection signal="area_entered" from="Player" to="." method="_on_player_area_entered"]
