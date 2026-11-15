@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://lrd41pj8oetp" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://brkk1lbweoyit" path="res://main.gd" id="1_7mycd"]
-[ext_resource type="Texture2D" uid="uid://c77je2wb0bx72" path="res://assets/Sprites/Clawmachine.png" id="3_7mycd"]
 [ext_resource type="Script" uid="uid://ddcvp6cd5k163" path="res://background.gd" id="4_dg77c"]
 [ext_resource type="Texture2D" uid="uid://cypkt3qpydj70" path="res://assets/Sprites/ClawMachineGlass.png" id="4_kek77"]
 [ext_resource type="Texture2D" uid="uid://bxjj8xuut3wew" path="res://assets/Sprites/CoinSlot.png" id="5_4c57u"]
@@ -12,6 +11,9 @@
 [ext_resource type="FontFile" uid="uid://4eqh3vdbk283" path="res://Fonts/you-re-gone.youre-regular.otf" id="7_272bh"]
 [ext_resource type="Script" uid="uid://dxqwwsryaedoc" path="res://bullet_spawner.gd" id="10_ycdy4"]
 [ext_resource type="Script" uid="uid://cfqxmelxbevre" path="res://ui.gd" id="11_w48qg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_efxa6"]
+load_path = "res://.godot/imported/Clawmachine.png-a58ca17e72a5877aeb3a9061b1585691.ctex"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_chynj"]
 
@@ -24,7 +26,7 @@ one_shot = true
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1555562007]
 position = Vector2(235, 423)
-texture = ExtResource("3_7mycd")
+texture = SubResource("CompressedTexture2D_efxa6")
 script = ExtResource("4_dg77c")
 
 [node name="ClawMachineGlass" type="Sprite2D" parent="Background" unique_id=1470010535]
