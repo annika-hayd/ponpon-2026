@@ -8,12 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://cs63m3okcd8b2" path="res://bullet.tscn" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://c6gxrrv5yeghm" path="res://assets/Sprites/Sparkle.png" id="5_272bh"]
 [ext_resource type="Texture2D" uid="uid://b175hf6ipufcx" path="res://assets/Sprites/CoinSad.png" id="6_efxa6"]
-[ext_resource type="Texture2D" uid="uid://d5fmpouaiw13" path="res://assets/UI/placeholder_claw.png" id="6_w48qg"]
+[ext_resource type="Texture2D" uid="uid://d5fmpouaiw13" path="res://assets/Characters/placeholder_claw.png" id="6_w48qg"]
 [ext_resource type="FontFile" uid="uid://4eqh3vdbk283" path="res://Fonts/you-re-gone.youre-regular.otf" id="7_272bh"]
-[ext_resource type="Texture2D" uid="uid://dwrl5ijgs10ik" path="res://assets/Sprites/placeholder_bunny.png" id="7_vivmo"]
+[ext_resource type="Texture2D" uid="uid://dwrl5ijgs10ik" path="res://assets/Characters/placeholder_bunny.png" id="7_vivmo"]
 [ext_resource type="Script" uid="uid://dxqwwsryaedoc" path="res://bullet_spawner.gd" id="10_ycdy4"]
 [ext_resource type="Script" uid="uid://cfqxmelxbevre" path="res://ui.gd" id="11_w48qg"]
-[ext_resource type="Texture2D" uid="uid://dg7aaaeytwtl0" path="res://assets/clawbreaker-logo4_placeholder.png" id="14_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://5xi4icrbx806" path="res://assets/clawbreaker-logo4_placeholder.png" id="14_2cqfq"]
 [ext_resource type="AudioStream" uid="uid://2nrmbj56fwr5" path="res://assets/music/phase 1 V1.wav" id="15_vivmo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_efxa6"]
@@ -121,17 +121,17 @@ offset_bottom = 40.0
 
 [node name="Dialog" type="Label" parent="UI/DialogBox" unique_id=828260868]
 layout_mode = 0
-offset_left = 76.0
-offset_top = 211.0
-offset_right = 392.0
-offset_bottom = 271.0
+offset_left = 70.0
+offset_top = 458.0
+offset_right = 386.0
+offset_bottom = 789.0
 
 [node name="NextButton" type="Button" parent="UI/DialogBox" unique_id=1553730242]
 layout_mode = 0
-offset_left = 216.0
-offset_top = 342.0
-offset_right = 259.0
-offset_bottom = 373.0
+offset_left = 206.0
+offset_top = 708.0
+offset_right = 249.0
+offset_bottom = 739.0
 text = "Next"
 
 [node name="GameOverScreen" type="Control" parent="UI" unique_id=1093430261]
@@ -144,20 +144,20 @@ offset_bottom = 221.0
 
 [node name="GameOverTitle" type="Label" parent="UI/GameOverScreen" unique_id=1386023522]
 layout_mode = 0
-offset_left = -26.0
-offset_top = 6.0
-offset_right = 117.0
-offset_bottom = 33.0
+offset_left = -33.0
+offset_top = 288.0
+offset_right = 110.0
+offset_bottom = 315.0
 theme_override_fonts/font = ExtResource("7_272bh")
 theme_override_font_sizes/font_size = 22
 text = "Game Over!"
 
 [node name="TryAgain" type="Button" parent="UI/GameOverScreen" unique_id=286793538]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 163.0
-offset_right = 87.0
-offset_bottom = 194.0
+offset_left = -7.0
+offset_top = 524.0
+offset_right = 69.0
+offset_bottom = 555.0
 text = "TryAgain"
 
 [node name="GameEndScreen" type="Control" parent="UI" unique_id=885963264]
@@ -168,16 +168,21 @@ offset_bottom = 40.0
 
 [node name="EndTitle" type="Label" parent="UI/GameEndScreen" unique_id=1014692038]
 layout_mode = 0
-offset_left = 188.0
-offset_top = 226.0
-offset_right = 283.0
-offset_bottom = 249.0
+offset_left = 169.0
+offset_top = 467.0
+offset_right = 313.0
+offset_bottom = 495.0
+theme_override_fonts/font = ExtResource("7_272bh")
+theme_override_font_sizes/font_size = 23
 text = "THE END! <3"
 
 [node name="TryAgain" type="Button" parent="UI/GameEndScreen" unique_id=1467196738]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 186.0
+offset_top = 709.0
+offset_right = 260.0
+offset_bottom = 733.0
+text = "Try again"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1712882528]
 stream = ExtResource("15_vivmo")
