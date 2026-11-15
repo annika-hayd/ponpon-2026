@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwrl5ijgs10ik"
-path="res://.godot/imported/placeholder_bunny.png-5cb5e68b249dd25b1936b702c3817b3a.ctex"
+uid="uid://bn63ojihytpk2"
+path="res://.godot/imported/bunny_wiggle.png-6e48cb13fc3543167efba8b4a7ca1fa2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/placeholder_bunny.png"
-dest_files=["res://.godot/imported/placeholder_bunny.png-5cb5e68b249dd25b1936b702c3817b3a.ctex"]
+source_file="res://assets/Characters/bunny_wiggle.png"
+dest_files=["res://.godot/imported/bunny_wiggle.png-6e48cb13fc3543167efba8b4a7ca1fa2.ctex"]
 
 [params]
 
