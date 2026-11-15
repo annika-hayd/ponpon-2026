@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgnj8xx1y3vxl"
-path="res://.godot/imported/BUNNY.png-a0596ccc338b9998b4f5cc8705c715a8.ctex"
+uid="uid://d5fmpouaiw13"
+path="res://.godot/imported/placeholder_claw.png-6b003b63140cc9a58bd5e409b67bf4f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bunny/BUNNY.png"
-dest_files=["res://.godot/imported/BUNNY.png-a0596ccc338b9998b4f5cc8705c715a8.ctex"]
+source_file="res://assets/Characters/placeholder_claw.png"
+dest_files=["res://.godot/imported/placeholder_claw.png-6b003b63140cc9a58bd5e409b67bf4f7.ctex"]
 
 [params]
 
