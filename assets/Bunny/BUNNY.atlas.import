@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://5233tdq2k77i"
+path="res://.godot/imported/BUNNY.atlas-98c4d1c85d81701fed2913317b4bb4b3.spatlas"
+
+[deps]
+
+source_file="res://assets/Bunny/BUNNY.atlas"
+dest_files=["res://.godot/imported/BUNNY.atlas-98c4d1c85d81701fed2913317b4bb4b3.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"
