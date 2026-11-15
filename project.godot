@@ -13,7 +13,7 @@ config_version=5
 config/name="ponpon_2026"
 run/main_scene="uid://b4ds7r813d0ad"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://c4q1ggplinchd"
 
 [display]
 
@@ -22,6 +22,10 @@ window/size/viewport_height=845
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
+
+[gui]
+
+theme/custom_font="uid://4eqh3vdbk283"
 
 [physics]
 
