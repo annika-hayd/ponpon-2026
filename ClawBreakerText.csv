@@ -1,0 +1,39 @@
+﻿keys,en
+CHAR_CLAW,Claw
+CHAR_BUNNY,Bunny
+START_B,Start
+CONTINUE_B,Continue
+TRY_AGAIN_B,Try again
+TITLE_SCREEN_TITEL,Claw Breaker
+TITLE_SCREEN_TEXT,"Welcome to Clawbreaker!
+Please insert a token to start playing!
+Good luck winning your prize– look out, 
+this one really likes to escape."
+GAME_OVER_SCREEN_TITEL,Game Over
+GAME_OVER_SCREEN_TEXT,"Congratulations, you’ve caught 
+the last plushie left!
+Enjoy being owned for a whole 5 minutes 
+before being discarded in a landfill 
+after getting drooled on by a child.
+Chewed on by the family dog.
+Peed on by a cat."
+END_SCREEN_TITEL,THE END! <3
+DIALOG_1_CLAW_1,"…?
+… what are you doing?
+You aren’t supposed to move.
+Please stop moving. 
+Please comply. 
+Otherwise we’ll be in trouble."
+DIALOG_1_BUNNY_2,"Never! I'm getting out of here!"
+DIALOG_2_CLAW_1,"STOP FUCKING MOVING! 
+WHERE DO YOU THINK YOU’RE GOING– 
+THIS IS INEVITABLE! 
+YOU CANNOT ESCAPE US!!!"
+DIALOG_3_CLAW_1,"… I guess there was another way after all. 
+Thank you for showing me 
+that we don’t need to yield to capitalism 
+and can still create for fun. 
+That’s what a game jam is for after all!
+Thank you to everyone for doing their best 
+and making something really cool!"
+DIALOG_3_BUNNY_2,"We did it! Free at last!"

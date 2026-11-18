@@ -90,28 +90,35 @@ offset_bottom = 40.0
 
 [node name="ScreenTitle" type="Label" parent="UI/TitleScreen" unique_id=36390358]
 layout_mode = 0
-offset_left = 116.0
+offset_left = 105.0
 offset_top = 468.0
-offset_right = 360.0
+offset_right = 349.0
 offset_bottom = 496.0
 theme_override_fonts/font = ExtResource("7_272bh")
 theme_override_font_sizes/font_size = 23
-text = "Claw Breaker"
-horizontal_alignment = 1
+text = "TITLE_SCREEN_TITEL"
 vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="UI/TitleScreen" unique_id=2011396639]
-position = Vector2(235.00003, 598.00006)
-scale = Vector2(0.81578946, 0.84031415)
+position = Vector2(202.86105, 577.375)
+scale = Vector2(0.6061236, 0.6243452)
 texture = ExtResource("14_2cqfq")
 
 [node name="StartButton" type="Button" parent="UI/TitleScreen" unique_id=2126329949]
 layout_mode = 0
-offset_left = 197.0
-offset_top = 704.0
-offset_right = 253.0
-offset_bottom = 735.0
-text = "Start"
+offset_left = 100.0
+offset_top = 752.0
+offset_right = 156.0
+offset_bottom = 783.0
+text = "START_B"
+
+[node name="Label" type="Label" parent="UI/TitleScreen" unique_id=1083401764]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 657.0
+offset_right = 386.0
+offset_bottom = 775.0
+text = "TITLE_SCREEN_TEXT"
 
 [node name="DialogBox" type="Control" parent="UI" unique_id=433719524]
 layout_mode = 3
@@ -121,18 +128,18 @@ offset_bottom = 40.0
 
 [node name="Dialog" type="Label" parent="UI/DialogBox" unique_id=828260868]
 layout_mode = 0
-offset_left = 70.0
-offset_top = 458.0
-offset_right = 386.0
-offset_bottom = 789.0
+offset_left = 76.0
+offset_top = 504.0
+offset_right = 392.0
+offset_bottom = 704.0
 
 [node name="NextButton" type="Button" parent="UI/DialogBox" unique_id=1553730242]
 layout_mode = 0
-offset_left = 206.0
-offset_top = 708.0
-offset_right = 249.0
-offset_bottom = 739.0
-text = "Next"
+offset_left = 102.0
+offset_top = 749.0
+offset_right = 171.0
+offset_bottom = 780.0
+text = "CONTINUE_B"
 
 [node name="GameOverScreen" type="Control" parent="UI" unique_id=1093430261]
 layout_mode = 3
@@ -144,21 +151,29 @@ offset_bottom = 221.0
 
 [node name="GameOverTitle" type="Label" parent="UI/GameOverScreen" unique_id=1386023522]
 layout_mode = 0
-offset_left = -33.0
+offset_left = -86.0
 offset_top = 288.0
-offset_right = 110.0
+offset_right = 57.0
 offset_bottom = 315.0
 theme_override_fonts/font = ExtResource("7_272bh")
 theme_override_font_sizes/font_size = 22
-text = "Game Over!"
+text = "GAME_OVER_SCREEN_TITEL"
+
+[node name="Label" type="Label" parent="UI/GameOverScreen" unique_id=746339923]
+layout_mode = 0
+offset_left = -90.0
+offset_top = 385.0
+offset_right = 193.0
+offset_bottom = 515.0
+text = "GAME_OVER_SCREEN_TEXT"
 
 [node name="TryAgain" type="Button" parent="UI/GameOverScreen" unique_id=286793538]
 layout_mode = 0
-offset_left = -7.0
-offset_top = 524.0
-offset_right = 69.0
-offset_bottom = 555.0
-text = "TryAgain"
+offset_left = -90.0
+offset_top = 569.0
+offset_right = -14.0
+offset_bottom = 600.0
+text = "TRY_AGAIN_B"
 
 [node name="GameEndScreen" type="Control" parent="UI" unique_id=885963264]
 layout_mode = 3
@@ -168,21 +183,21 @@ offset_bottom = 40.0
 
 [node name="EndTitle" type="Label" parent="UI/GameEndScreen" unique_id=1014692038]
 layout_mode = 0
-offset_left = 169.0
+offset_left = 106.0
 offset_top = 467.0
-offset_right = 313.0
+offset_right = 250.0
 offset_bottom = 495.0
 theme_override_fonts/font = ExtResource("7_272bh")
 theme_override_font_sizes/font_size = 23
-text = "THE END! <3"
+text = "END_SCREEN_TITEL"
 
 [node name="TryAgain" type="Button" parent="UI/GameEndScreen" unique_id=1467196738]
 layout_mode = 0
-offset_left = 186.0
-offset_top = 709.0
-offset_right = 260.0
-offset_bottom = 733.0
-text = "Try again"
+offset_left = 104.0
+offset_top = 754.0
+offset_right = 178.0
+offset_bottom = 778.0
+text = "TRY_AGAIN_B"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1712882528]
 stream = ExtResource("15_vivmo")

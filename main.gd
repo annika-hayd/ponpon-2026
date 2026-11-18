@@ -58,6 +58,7 @@ func change_state(new_state: State) -> void:
 			ui.show_game_over()
 
 func set_gameplay_active(is_active: bool) -> void:
+	player.visible = is_active
 	player.set_process(is_active)
 	bullet_spawner.set_bullets_active(is_active)
 

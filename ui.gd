@@ -30,11 +30,11 @@ func show_dialog(level: int) -> void:
 	hide_all()
 	match level:
 		1:
-			dialog_label.text = "Welcome to this Game, this is a initial Dialog,\n  klick 'next' for starting the game"
+			dialog_label.text = tr("DIALOG_1_CLAW_1")
 		2:
-			dialog_label.text = "HA! You lost this level.. or maybe won...\n at least you've been hit by the bullet!"
+			dialog_label.text = tr("DIALOG_2_CLAW_1")
 		3:
-			dialog_label.text = "How do you like that?\n This is your last chance!!\n Good luck!"
+			dialog_label.text = tr("DIALOG_3_CLAW_1")
 	dialog_box.show()
 	next_button.grab_focus()
 
